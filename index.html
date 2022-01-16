@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pathfinder 1.0 Combat In Javascript</title>
+    <link href="styles/style.css" rel="stylesheet">
+  </head>
+
+  <script>
+    function combatantSelection1(){
+      var combatant1List = document.getElementById("combatant1SelectionList");
+      document.getElementById("combatant1Selected").value = combatant1List.options[combatant1List.selectedIndex].text;
+    }
+
+    function combatantSelection2(){
+      var combatant2List = document.getElementById("combatant2SelectionList");
+      document.getElementById("combatant2Selected").value = combatant2List.options[combatant2List.selectedIndex].text;
+    }
+  </script>
+
+  <body>
+    <h1>Choose combatants</h1>
+
+    <div class="combatant_selection_1">
+      <form>
+        <select id = "combatant1SelectionList" onchange = "combatantSelection1()">
+          <option>---Choose combatant 1 ---</option>
+          <option>Goblin</option>
+        </select>
+        <p> Your selected combatant is:
+          <input type = "text" id = "combatant1Selected" size = "20" </p>
+      </form>
+    </div>
+
+    <div class="combatant_selection_2">
+      <form>
+        <select id = "combatant2SelectionList" onchange = "combatantSelection2()">
+          <option>---Choose combatant 2 ---</option>
+          <option>Orc</option>
+        </select>
+        <p> Your selected combatant is:
+          <input type = "text" id = "combatant2Selected" size = "20" </p>
+      </form>
+    </div>
+
+    <button>Change user</button>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
